@@ -27,31 +27,19 @@ AI는 이미 확정된 판정 결과를 받아서 "왜 이런 결과가 나왔�
 - 📄 **정식 문서 양식 보고서** — 문서번호·레터헤드·서명란까지 갖춘 PDF 출력 가능한 보고서
 - 🔗 **리스트뷰 → 새 탭 보고서** — 측정 목록에서 행을 선택하면 새 탭에서 해당 보고서가 열림
 
-## 파일 구조
-
-```
-.
-├── dashboard.html              # 측정 현황 대시보드 (KPI 카드 + 차트 + 목록)
-├── measurement-entry.html      # 측정 데이터 등록 (CSV 가져오기 + 개별 입력)
-├── report.html                 # 보고서 목록 (리스트뷰 전용, 행 선택 시 새 탭 오픈)
-├── report-viewer.html          # 실제 보고서 문서 (PDF 출력 가능한 단일 문서 뷰어)
-├── vibration-sensor-sample-data.xlsx   # 샘플 데이터 (센서마스터 / 측정데이터 / 판정결과)
-├── vibration_sample_data_only.csv      # CSV 가져오기 테스트용 샘플 파일
-└── vibration-monitoring-workflow.png   # 처리 워크플로우 다이어그램
-```
 
 ## 화면 흐름
 
 ```
-dashboard.html ──┬── (측정 등록으로 이동) ──> measurement-entry.html
+대시보드페이지 ──┬── (측정 등록으로 이동) ──> 측정등록페이지
                   │                              │
                   │                        CSV 가져오기 / 개별 입력
                   │                              │
-                  └── (보고서 보기) ──────> report.html (리스트뷰)
+                  └── (보고서 보기) ──────> 보고서페이지 (리스트뷰)
                                                    │
                                           행 선택 시 새 탭
                                                    ▼
-                                          report-viewer.html
+                                          선택한 보고서
                                           (PDF로 내보내기 가능)
 ```
 
