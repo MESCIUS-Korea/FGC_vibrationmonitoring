@@ -44,27 +44,8 @@ AI는 이미 확정된 판정 결과를 받아서 "왜 이런 결과가 나왔�
 ```
 
 ## 실행 방법
+프로젝트 파일을 다운로드 받아 실행하시면 됩니다.
 
-별도 빌드나 설치 과정이 없습니다. 리포지토리를 클론한 뒤 `dashboard.html`을 브라우저로 열면 바로 확인할 수 있습니다.
-
-```bash
-git clone <repository-url>
-cd vibration-monitoring-ai
-open dashboard.html   # 또는 브라우저에서 직접 열기
-```
-
-> 새 탭 이동(리스트뷰 → 보고서 뷰어) 기능이 정상 동작하려면, 파일을 직접 열기보다는 로컬 서버로 띄우는 것을 권장합니다.
-> ```bash
-> npx serve .
-> ```
-
-## 기술 스택
-
-순수 HTML / CSS / Vanilla JavaScript로만 제작되었습니다. 외부 프레임워크나 빌드 도구 없이, 폰트만 Google Fonts(Noto Sans KR)를 CDN으로 불러옵니다.
-
-- 차트: 외부 라이브러리 없이 SVG로 직접 구현 (도넛 차트, 막대 차트)
-- PDF 출력: 브라우저 `window.print()` + `@media print` 스타일
-- 판정 로직: 클라이언트 JS로 구현된 규칙 기반 함수 (`judge()`)
 
 ## 실제 Forguncy로 구현 시 참고사항
 
@@ -79,6 +60,4 @@ open dashboard.html   # 또는 브라우저에서 직접 열기
 | 리스트뷰 → 새 탭 보고서 | 행 클릭 시 파라미터 전달 + "새 탭에서 열기" 명령 |
 | PDF 보고서 | Forguncy 보고서(Report) 객체 + 보고서 뷰어 |
 
-## 라이선스
 
-내부 데모/프로토타입 목적의 예제입니다. 실제 배포 전 별도 라이선스 정책을 정해주세요.
